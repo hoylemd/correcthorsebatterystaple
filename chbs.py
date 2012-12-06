@@ -1,8 +1,4 @@
-import random
-l = open('/usr/share/dict/words', 'r').readlines()
-p = ""
-for i in range(0, 4):
-  w = random.choice(l).replace("\n", "")
-  p += w.title()
-print p
-
+import random, sys
+l=open('/usr/share/dict/words','r').readlines()
+for i in range(0,4):
+  sys.stdout.write(random.choice(l).replace("\n", "").title())
